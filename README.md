@@ -16,3 +16,6 @@ Several tests have been implemented already, some of which are currently failing
 These failing tests set out the requirements for the additional code to be implemented during the workshop.
 
 The tests should be run using `pytest`, which will be introduced during the workshop.
+
+
+[![codecov](https://codecov.io/gh/kawamanmi/python-intermediate-inflammation/branch/develop/graph/badge.svg)](https://codecov.io/gh/kawamanmi/python-intermediate-inflammation)
