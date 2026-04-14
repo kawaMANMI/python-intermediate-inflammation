@@ -2,8 +2,9 @@
 
 import numpy as np
 import numpy.testing as npt
-
+import pytest
 from inflammation.models import daily_mean
+
 
 def test_daily_mean_zeros():
     """Test that mean function works for an array of zeros."""
@@ -29,3 +30,45 @@ def test_daily_mean_integers():
     # Need to use Numpy testing functions to compare arrays
     npt.assert_array_equal(daily_mean(test_input), test_result)
 
+
+
+@pytest.mark.parametrize(
+    "test_input, expected", 
+    [
+        ([ [0, 0], [0, 0], [0, 0] ], [0,0]), 
+        ([ [1, 2], [3, 4], [5, 6] ], [3, 4] )
+    ]
+)
+def test_daily_mean(test_input, expected):
+    """Test that mean function works for an array of positive integers."""
+
+    test_input = np.array(test_input)
+    expected = np.array(expected)
+
+    # Need to use Numpy testing functions to compare arrays
+    npt.assert_array_equal(daily_mean(test_input), expected)
+import numpy.testing as npt
+
+
+@pytest.mark.parametrize(
+    "test_input, expected",
+    [
+        ([[0, 0], [0, 0], [0, 0]], [0, 0]),
+        ([[1, 2], [3, 4], [5, 6]], [1, 2]),
+    ]
+)
+def test_daily_min(test_input, expected):
+    from inflammation.models import daily_min
+    npt.assert_array_equal(daily_min(test_input), expected)
+
+
+@pytest.mark.parametrize(
+    "test_input, expected",
+    [
+        ([[0, 0], [0, 0], [0, 0]], [0, 0]),
+        ([[1, 2], [3, 4], [5, 6]], [5, 6]),
+    ]
+)
+def test_daily_max(test_input, expected):
+    from inflammation.models import daily_max
+    npt.assert_array_equal(daily_max(test_input), expected)
