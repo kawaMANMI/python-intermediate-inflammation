@@ -1,7 +1,11 @@
 """Module containing code for plotting inflammation data."""
 
-from matplotlib import pyplot as plt
+import matplotlib
 import numpy as np
+from matplotlib import pyplot as plt
+
+matplotlib.use('Qt5Agg')
+import matplotlib.pyplot as plt
 
 
 def visualize(data_dict):
