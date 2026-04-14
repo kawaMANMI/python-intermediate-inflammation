@@ -18,4 +18,4 @@ These failing tests set out the requirements for the additional code to be imple
 The tests should be run using `pytest`, which will be introduced during the workshop.
 
 
-[![codecov](https://codecov.io/gh/kawamanmi/python-intermediate-inflammation/branch/develop/graph/badge.svg)](https://codecov.io/gh/kawamanmi/python-intermediate-inflammation)
+[![codecov](https://codecov.io/gh/kawamanmi/python-intermediate-inflammation/branch/style-fixes/graph/badge.svg)](https://codecov.io/gh/kawamanmi/python-intermediate-inflammation)
